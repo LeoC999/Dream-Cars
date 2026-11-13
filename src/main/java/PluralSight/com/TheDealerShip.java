@@ -6,7 +6,7 @@ public class TheDealerShip {
     private String userName;
     private String userAddress;
     private String userPhoneNumber;
-     ArrayList<MyDreamCars>inventory;
+    private ArrayList<MyDreamCars>inventory;
 
     //The dealership conductor
 

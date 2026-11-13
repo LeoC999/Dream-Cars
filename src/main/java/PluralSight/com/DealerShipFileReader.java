@@ -1,5 +1,10 @@
 package PluralSight.com;
 
+import java.util.ArrayList;
+
 public class DealerShipFileReader {
-    TheDealerShip gettheDealerShip;
+    public TheDealerShip getDealerShip() {
+        return null;
+    }
+    public void saveDealership(TheDealerShip theDealerShip) {}
 }

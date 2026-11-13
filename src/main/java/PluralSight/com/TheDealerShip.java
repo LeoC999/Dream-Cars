@@ -29,26 +29,43 @@ public class TheDealerShip {
         return userPhoneNumber;
     }
 //The extra gettors for the other classes
+//Now I know, when the file works I have to but index numbers for the file, and get all, would be the entire file
 
-    public  class getMyDreamCarsByPrice{
+    public static class getMyDreamCarsByPrice{
         public ArrayList<MyDreamCars> getMyDreamCarsByPrice(double minPrice, double maxPrice) {
             return getMyDreamCarsByPrice(minPrice, maxPrice);
         }
     }
-    public class getMyDreamCarsByMake{
+    public static class getMyDreamCarsByMake{
         public ArrayList<MyDreamCars> getMyDreamCarsByMake(double make, double model) {
             return getMyDreamCarsByMake(make, model);
         }
     }
-    public class getMyDreamCarsByYear{
+    public static class getMyDreamCarsByYear{
         public ArrayList<MyDreamCars> getMyDreamCarsByYear(double year) {
             return getMyDreamCarsByYear(year);
         }
     }
-    public class getMyDreamCarsByColor{
+    public static class getMyDreamCarsByColor{
         public ArrayList<MyDreamCars> getMyDreamCarsByColor(String color) {
             return getMyDreamCarsByColor(color);
         }
     }
+     public static class getMyDreamCarsByMileage{
+        public ArrayList<MyDreamCars> getMyDreamCarsByMileage(double mileage) {
+            return  getMyDreamCarsByMileage(mileage);
+        }
+     }
+      public static class getMyDreamCarsByType{
+        public ArrayList<MyDreamCars> getMyDreamCarsByType(String type) {
+            return getMyDreamCarsByType(type);
+        }
+      }
+      public static class getAllMyDreamCars{
+        
 
+      }
+       public static class addToMyDreamCars{
+
+       }
 }

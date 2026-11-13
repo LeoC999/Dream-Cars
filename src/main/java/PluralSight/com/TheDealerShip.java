@@ -14,6 +14,8 @@ public class TheDealerShip {
         this.userName = userName;
         this.userAddress = userAddress;
         this.userPhoneNumber = userPhoneNumber;
+
+        inventory = new ArrayList<>();
     }
     //The regular getters are here
 
@@ -28,44 +30,40 @@ public class TheDealerShip {
     public String getUserPhoneNumber() {
         return userPhoneNumber;
     }
-//The extra gettors for the other classes
+//The extra getters for the other classes
 //Now I know, when the file works I have to but index numbers for the file, and get all, would be the entire file
+//Edit so the arraylist was supposed to go first
+//And to add and remove inventory just call the inventory
 
-    public static class getMyDreamCarsByPrice{
-        public ArrayList<MyDreamCars> getMyDreamCarsByPrice(double minPrice, double maxPrice) {
-            return getMyDreamCarsByPrice(minPrice, maxPrice);
-        }
-    }
-    public static class getMyDreamCarsByMake{
-        public ArrayList<MyDreamCars> getMyDreamCarsByMake(double make, double model) {
-            return getMyDreamCarsByMake(make, model);
-        }
-    }
-    public static class getMyDreamCarsByYear{
-        public ArrayList<MyDreamCars> getMyDreamCarsByYear(double year) {
-            return getMyDreamCarsByYear(year);
-        }
-    }
-    public static class getMyDreamCarsByColor{
-        public ArrayList<MyDreamCars> getMyDreamCarsByColor(String color) {
-            return getMyDreamCarsByColor(color);
-        }
-    }
-     public static class getMyDreamCarsByMileage{
-        public ArrayList<MyDreamCars> getMyDreamCarsByMileage(double mileage) {
-            return  getMyDreamCarsByMileage(mileage);
-        }
-     }
-      public static class getMyDreamCarsByType{
-        public ArrayList<MyDreamCars> getMyDreamCarsByType(String type) {
-            return getMyDreamCarsByType(type);
-        }
-      }
-      public static class getAllMyDreamCars{
-        
-
-      }
-       public static class addToMyDreamCars{
-
+    public ArrayList<MyDreamCars> getMyDreamCarsByPrice(double minPrice, double maxPrice) {
+        return null;
        }
+    public ArrayList<MyDreamCars> getMyDreamCarsByMake(String make) {
+        return null;
+    }
+    public ArrayList<MyDreamCars> getMyDreamCarsByModel(String model) {
+        return null;
+    }
+    public ArrayList<MyDreamCars> getMyDreamCarsByYear(double year) {
+        return null;
+    }
+    public ArrayList<MyDreamCars> getMyDreamCarsByColor(String color) {
+        return null;
+    }
+    public ArrayList<MyDreamCars> getMyDreamCarsByMilage(double milage) {
+        return null;
+    }
+    public ArrayList<MyDreamCars> getMyDreamCarsByType(String type) {
+        return null;
+    }
+    public ArrayList<MyDreamCars> getAllMyDreamCars() {
+        return inventory;
+    }
+    public void addToMyDreamCars(MyDreamCars myDreamCars) {
+        inventory.add(myDreamCars);
+    }
+    public void removeFromMyDreamCars(MyDreamCars myDreamCars) {
+        inventory.remove(myDreamCars);
+    }
 }
+

@@ -1,5 +1,6 @@
 package PluralSight.com;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class TheDealerShip {
@@ -30,31 +31,84 @@ public class TheDealerShip {
     public String getUserPhoneNumber() {
         return userPhoneNumber;
     }
+
 //The extra getters for the other classes
 //Now I know, when the file works I have to but index numbers for the file, and get all, would be the entire file
 //Edit so the arraylist was supposed to go first
 //And to add and remove inventory just call the inventory
 
     public ArrayList<MyDreamCars> getMyDreamCarsByPrice(double minPrice, double maxPrice) {
-        return null;
+        ArrayList<MyDreamCars> match = new ArrayList<>();
+        for (MyDreamCars myDreamCars : inventory) {
+
+            BigDecimal min = BigDecimal.valueOf(minPrice);
+            BigDecimal max = BigDecimal.valueOf(maxPrice);
+
+            if (myDreamCars.getPrice().compareTo(min) >= 0 &&
+                    myDreamCars.getPrice().compareTo(max) <= 0) {
+
+                match.add(myDreamCars);
+            }
+        }
+        return match;
        }
+
     public ArrayList<MyDreamCars> getMyDreamCarsByMake(String make) {
-        return null;
+        ArrayList<MyDreamCars> match = new ArrayList<>();
+        for (MyDreamCars myDreamCars : inventory) {
+            if (myDreamCars.getMake().equals(make)) {
+                match.add(myDreamCars);
+            }
+        }
+        return match;
     }
+
     public ArrayList<MyDreamCars> getMyDreamCarsByModel(String model) {
-        return null;
+      ArrayList<MyDreamCars> match = new ArrayList<>();
+      for (MyDreamCars myDreamCars : inventory) {
+          if (myDreamCars.getModel().equals(model)) {
+              match.add(myDreamCars);
+          }
+      }
+      return match;
     }
-    public ArrayList<MyDreamCars> getMyDreamCarsByYear(double year) {
-        return null;
+    public ArrayList<MyDreamCars> getMyDreamCarsByYear(int year) {
+      ArrayList<MyDreamCars> match = new ArrayList<>();
+      for (MyDreamCars myDreamCars : inventory) {
+          if (myDreamCars.getYear() == year) {
+              match.add(myDreamCars);
+          }
+      }
+      return match;
     }
+
     public ArrayList<MyDreamCars> getMyDreamCarsByColor(String color) {
-        return null;
+        ArrayList<MyDreamCars> match = new ArrayList<>();
+        for (MyDreamCars myDreamCars : inventory) {
+            if (myDreamCars.getColor().equals(color)) {
+                match.add(myDreamCars);
+            }
+        }
+        return match;
     }
-    public ArrayList<MyDreamCars> getMyDreamCarsByMilage(double milage) {
-        return null;
+
+    public ArrayList<MyDreamCars> getMyDreamCarsByMilage(int milage) {
+        ArrayList<MyDreamCars> match = new ArrayList<>();
+        for (MyDreamCars myDreamCars : inventory) {
+            if(myDreamCars.getOdometer() <= milage) {
+                match.add(myDreamCars);
+            }
+        }
+        return match;
     }
     public ArrayList<MyDreamCars> getMyDreamCarsByType(String type) {
-        return null;
+        ArrayList<MyDreamCars> match = new ArrayList<>();
+        for (MyDreamCars myDreamCars : inventory) {
+            if (myDreamCars.getType().equalsIgnoreCase(type)) {
+                match.add(myDreamCars);
+            }
+        }
+        return match;
     }
     public ArrayList<MyDreamCars> getAllMyDreamCars() {
         return inventory;

@@ -2,6 +2,7 @@ package PluralSight.com;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.math.BigDecimal;
 
 
 public class DealerShipFileReader {
@@ -9,24 +10,44 @@ public class DealerShipFileReader {
     public TheDealerShip getDealerShip() {
         try {
             BufferedReader fr = new BufferedReader(new FileReader("DealerShipInfo.csv"));
+
             String reading = fr.readLine();
+            String[] DealerInfo = reading.split("\\|");
 
-            String[] dealerInfo = reading.split("\\|");
+            TheDealerShip dealerShip = new TheDealerShip(
+                    DealerInfo[0],
+                    DealerInfo[1],
+                    DealerInfo[2]);
 
-                new TheDealerShip(
-                    dealerInfo[0],
-                    dealerInfo[1],
-                    dealerInfo[2]);
 
-            TheDealerShip dealership = new TheDealerShip("TestUser", "Test Address", "415-999-4123");
+            String line;
 
-            return dealership;
+            while ((line = fr.readLine()) != null) {
+
+                String[] vehicleInfo = line.split("\\|");
+
+                MyDreamCars car = new MyDreamCars(
+                        vehicleInfo[0],
+                        Integer.parseInt(vehicleInfo[1]),
+                        vehicleInfo[2],
+                        vehicleInfo[3],
+                        vehicleInfo[4],
+                        vehicleInfo[5],
+                        Integer.parseInt(vehicleInfo[6]),
+                        new BigDecimal(vehicleInfo[7])
+                );
+
+                dealerShip.addToMyDreamCars(car);
+            }
+
+            fr.close();
+
+            return dealerShip;
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         return null;
     }
-        public void saveDealership (TheDealerShip theDealerShip){
-        }
-    }
+}

@@ -27,7 +27,7 @@ public class MyDreamCars {
         return vin;
     }
 
-    public double getYear() {
+    public int getYear() {
         return year;
     }
 
@@ -67,10 +67,6 @@ public class MyDreamCars {
         return odometer;
     }
 
-    public void setOdometer(int odometer) {
-        this.odometer = odometer;
-    }
-
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
@@ -81,10 +77,6 @@ public class MyDreamCars {
 
     public String getType() {
         return type;
-    }
-
-    public int getOdemmeter() {
-        return odometer;
     }
 
     public BigDecimal getPrice() {

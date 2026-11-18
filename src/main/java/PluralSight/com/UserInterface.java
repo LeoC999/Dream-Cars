@@ -36,11 +36,13 @@ private void initialize(){
     theDealerShip = dealerShipFileReader.getDealerShip();
 }
 
+
 private void displayTheDealerShip(ArrayList<TheDealerShip> theDealerShips){
 
 }
 
 private void processGetAllTheCars(){
-
+ArrayList<MyDreamCars> veicles = theDealerShip.getAllMyDreamCars();
+displayTheDealerShip(veicles);
 }
 }

@@ -40,6 +40,7 @@ public class DealerShipFileReader {
                 dealerShip.addToMyDreamCars(car);
             }
 
+
             fr.close();
 
             return dealerShip;
@@ -48,6 +49,7 @@ public class DealerShipFileReader {
             e.printStackTrace();
         }
 
-        return null;
+       return null;
     }
+
 }

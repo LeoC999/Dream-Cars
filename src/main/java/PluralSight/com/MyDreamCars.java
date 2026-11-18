@@ -82,4 +82,17 @@ public class MyDreamCars {
     public BigDecimal getPrice() {
         return price;
     }
+
+
+@Override
+public String toString() {
+    return vin + " | " +
+            year + " | " +
+            make + " | " +
+            model + " | " +
+            color + " | " +
+            type + " | " +
+            odometer + " | " +
+            price;
+    }
 }

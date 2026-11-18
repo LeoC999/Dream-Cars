@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class UserInterface {
 private TheDealerShip theDealerShip;
-
 public void display() {
     initialize();
 
@@ -21,26 +20,30 @@ public void display() {
 
         switch (command) {
             case 1:
-                processGetAllTheCars();
+              processGetAllTheCars();
                 break;
-            case 2:
-                running = false;
+            case 99:
+               running = false;
                 break;
-
-        }
+                default:
+                    System.out.println("Invalid command");
+      }
     }
 }
 
 private void initialize(){
-    DealerShipFileReader dealerShipFileReader = new DealerShipFileReader();
-    theDealerShip = dealerShipFileReader.getDealerShip();
+DealerShipFileReader dealerShipFileReader = new DealerShipFileReader();
+   theDealerShip = dealerShipFileReader.getDealerShip();
 }
 
 
-private void displayTheDealerShip(ArrayList<TheDealerShip> theDealerShips){
+private void displayTheDealerShip(ArrayList<MyDreamCars> vehicles){
+    for (MyDreamCars car : vehicles){
+        System.out.println(car);
+    }
+
 
 }
-
 private void processGetAllTheCars(){
 ArrayList<MyDreamCars> veicles = theDealerShip.getAllMyDreamCars();
 displayTheDealerShip(veicles);

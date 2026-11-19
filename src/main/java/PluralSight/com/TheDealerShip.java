@@ -18,7 +18,7 @@ public class TheDealerShip {
 
         inventory = new ArrayList<>();
     }
-    //The regular getters are here
+    //The regular getters go here
 
     public String getUserName() {
         return userName;
@@ -44,8 +44,8 @@ public class TheDealerShip {
             BigDecimal min = BigDecimal.valueOf(minPrice);
             BigDecimal max = BigDecimal.valueOf(maxPrice);
 
-            if (myDreamCars.getPrice().compareTo(min) >= 0 &&
-                    myDreamCars.getPrice().compareTo(max) <= 0) {
+            if (myDreamCars.getPrice() >= 0 &&
+                    myDreamCars.getPrice() <= 0) {
 
                 match.add(myDreamCars);
             }
